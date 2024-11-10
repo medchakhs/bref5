@@ -18,10 +18,15 @@ function formaa(){
 // page 4 les btn plus est moins est prix total est Sélection des lieux
 
 
-let adultCount = 0;
-let childCount = 0;
+let adultCounteur = 0;
+let EnfantCounteur = 0;
 const adultPrice = 500;
-const childPrice = 100;
+const EnfantPrice = 100;
+
+
+
+
+
 
 
 
