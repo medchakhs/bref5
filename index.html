@@ -24,11 +24,11 @@
           <div class='progress_inner__step'>
             <label for='step-5'>Les tickets</label>
           </div>
-          <input checked='checked' id='step-1' name='step' type='radio'>
+          <input checked='checked' id='step-0' name='step' type='radio'>
+          <input id='step-1' name='step' type='radio'>
           <input id='step-2' name='step' type='radio'>
           <input id='step-3' name='step' type='radio'>
           <input id='step-4' name='step' type='radio'>
-          <input id='step-5' name='step' type='radio'>
           <div class='progress_inner__bar'></div>
           <div class='progress_inner__bar--set'></div>
           <div class='progress_inner__tabs'>
@@ -90,18 +90,18 @@
                     <div>
                         <h4>Adult (Prix 500DH)</h4>
                         <div style="display: flex; align-items: center; gap: 10px;">
-                            <button type="button" style="border-radius: 50%; width: 50px; height: 50px; font-size: 15pt; color: #2e6c8e; background-color: #a6cde2; border: 3px solid #2e6c8e; cursor: pointer;">+</button>
-                            <span>0</span>
-                            <button type="button" style="border-radius: 50%; width: 50px; height: 50px; font-size: 15pt; color: #2e6c8e; background-color: #a6cde2; border: 3px solid #2e6c8e; cursor: pointer;">-</button>
+                            <button onclick="increment()" type="button" style="border-radius: 50%; width: 50px; height: 50px; font-size: 15pt; color: #2e6c8e; background-color: #a6cde2; border: 3px solid #2e6c8e; cursor: pointer;">+</button>
+                            <span id="Adultplace" >0</span>
+                            <button onclick="decrement()" type="button" style="border-radius: 50%; width: 50px; height: 50px; font-size: 15pt; color: #2e6c8e; background-color: #a6cde2; border: 3px solid #2e6c8e; cursor: pointer;">-</button>
                         </div>
                     </div>
                     <div style="width: 5px; background-color: #2e6c8e;"></div>
                     <div>
                         <h4>Enfant (Prix 100DH)</h4>
                         <div style="display: flex; align-items: center; gap: 10px;">
-                            <button type="button" style="border-radius: 50%; width: 50px; height: 50px; font-size: 15pt; color: #2e6c8e; background-color: #a6cde2; border: 3px solid #2e6c8e; cursor: pointer;">+</button>
-                            <span>1</span>
-                            <button style="border-radius: 50%; width: 50px; height: 50px; font-size: 15pt; color: #2e6c8e; background-color: #a6cde2; border: 3px solid #2e6c8e; cursor: pointer;">-</button>
+                            <button onclick="incremente()" type="button" style="border-radius: 50%; width: 50px; height: 50px; font-size: 15pt; color: #2e6c8e; background-color: #a6cde2; border: 3px solid #2e6c8e; cursor: pointer;">+</button>
+                            <span id="Enfantplace">0</span>
+                            <button onclick="decrementee()" type="button" style="border-radius: 50%; width: 50px; height: 50px; font-size: 15pt; color: #2e6c8e; background-color: #a6cde2; border: 3px solid #2e6c8e; cursor: pointer;">-</button>
                         </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                     <button style="border-radius: 5px; width: 50px; height: 50px; font-size: 15pt; color: #2e6c8e; background-color: #a6cde2; border: 3px solid #2e6c8e;">-</button>
                     <button style="border-radius: 5px; width: 50px; height: 50px; font-size: 15pt; color: #2e6c8e; background-color: #a6cde2; border: 3px solid #2e6c8e;">-</button>
                 </div>
-                <h4>Prix Total : 0000DH</h4>
+                <h4 id="PrixTotal">Prix Total : 0000DH</h4>
                 <button type="button" class="partier-perso" onclick="formaa()">Suivent</button>
             </div>
             <div class='tab tab-4'>
@@ -141,6 +141,6 @@
           </div>
         </div>
       </div>
-      <script src="breif4.js"></script>
+      <script src="breif5.js"></script>
 </body>
 </html>
