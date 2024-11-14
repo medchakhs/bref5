@@ -55,32 +55,32 @@
             <div class='tab tab-2'>
               <h1>Les resultat de recherche</h1>
               <div style="display: flex; flex-direction: column;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 15px 20px; text-align: center; border-radius: 8px; box-shadow: 0px 2px 40px -15px #70afd0; border: 1px solid #70afd0; color: #2e6c8e; font-weight: 700; font-size: 13pt;">
+                <button class="temps tompse" style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 15px 20px; text-align: center; border-radius: 8px; box-shadow: 0px 2px 40px -15px #70afd0; color: #2e6c8e; font-weight: 700; font-size: 13pt;">
                     <img height="50px" src="https://beebom.com/wp-content/uploads/2018/12/Lufthansa-Logo.jpg" alt="">
                     <span>6:30</span>
                     <img width="50px" src="./airplane.png" alt="">
                     <span>8:45</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 15px 20px; text-align: center; border-radius: 8px; box-shadow: 0px 2px 40px -15px #70afd0; border: 1px solid #70afd0; color: #2e6c8e; font-weight: 700; font-size: 13pt;">
+                </button>
+                <button class="temps tompse" style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 15px 20px; text-align: center; border-radius: 8px; box-shadow: 0px 2px 40px -15px #70afd0; color: #2e6c8e; font-weight: 700; font-size: 13pt;">
                     <img height="50px" src="https://beebom.com/wp-content/uploads/2018/12/Lufthansa-Logo.jpg" alt="">
                     <span>6:30</span>
                     <img width="50px" src="./airplane.png" alt="">
                     <span>8:45</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 15px 20px; text-align: center; border-radius: 8px; box-shadow: 0px 2px 40px -15px #70afd0; border: 1px solid #70afd0; color: #2e6c8e; font-weight: 700; font-size: 13pt;">
+                </button>
+                <button class="temps tompse" style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 15px 20px; text-align: center; border-radius: 8px; box-shadow: 0px 2px 40px -15px #70afd0; color: #2e6c8e; font-weight: 700; font-size: 13pt;">
                     <img height="50px" src="https://beebom.com/wp-content/uploads/2018/12/Lufthansa-Logo.jpg" alt="">
                     <span>6:30</span>
                     <img width="50px" src="./airplane.png" alt="">
                     <span>8:45</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 15px 20px; text-align: center; border-radius: 8px; box-shadow: 0px 2px 40px -15px #70afd0; border: 1px solid #70afd0; color: #2e6c8e; font-weight: 700; font-size: 13pt;">
+                </button>
+                <button class="temps tompse" style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 15px 20px; text-align: center; border-radius: 8px; box-shadow: 0px 2px 40px -15px #70afd0; color: #2e6c8e; font-weight: 700; font-size: 13pt;">
                     <img height="50px" src="https://beebom.com/wp-content/uploads/2018/12/Lufthansa-Logo.jpg" alt="">
                     <span>6:30</span>
                     <img width="50px" src="./airplane.png" alt="">
                     <span>8:45</span>
-                </div>
+                </button>
                <div>
-                <button style=" margin-top: 10px;  " type="button" class="partier-perso" onclick="formaa()">Suivant</button>
+                <button id="suivent2" style=" margin-top: 10px; display: none; " type="button" class="partier-perso" onclick="formaa()">Suivant</button>
               </div>
               </div>
             </div>
@@ -121,20 +121,10 @@
             </div>
             <div class='tab tab-4'>
               <h1>Les tickets</h1>
-              
-              <div style="height: 500px;display: flex; justify-content: center; align-items: center;">
-              <div class="card content">
-                <div class="user-info">
-                  <p>Nom et prénom : <span>AZIZ</span></p>
-                  <p>E-mail : <span>test.aziz@gmail.com</span></p>
-                  <p>Date de réservation : <span>12/15/48</span></p>
-                  <p>Prix : <span>00000DH</span></p>
-                </div>
-                <div class="qr-code">
-                  <p>Code QR :</p>
-                  <img src="qr-code.svg" alt="code QR"/>
-                </div>
-              </div>
+             
+              <div id="ticket"  style="display: flex;flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center;">
+                 
+            
               </div>
             
             </div>

@@ -147,11 +147,96 @@ function toggleNextButton() {
 // });
 
 
+// let tompse = document.getElementsByClassName('tompse');
+// console.log(tompse);
+// tompse.click()
+//   if  ( tompse.length === 0 ) {
+//     document.getElementById("suivent2").style.display = 'none';
+// } else {
+//     document.getElementById("suivent2").style.display = 'block';
+// }
+
+
+let tompse = document.getElementsByClassName('tompse');
+for (let i = 0; i < tompse.length; i++) {
+    tompse[i].addEventListener('click', handleClick);
+}
+
+function handleClick() {
+    let tompse = document.getElementsByClassName('tompse');
+    const suivent2 = document.getElementById("suivent2");
+    if (tompse.length === 0) {
+        document.getElementById("suivent2").style.display = 'none';
+    } else {
+        document.getElementById("suivent2").style.display = 'block';
+        suivent2.style.marginLeft = "265px";
+    }
+}
 
 
 
 
+let step5 = document.getElementById('step-5');
+let date = document.getElementById('date');
 
+step5.onclick = function() {
+    let ticket = document.getElementById('ticket');
+    let depart = document.getElementById('depart');
+    let arriver = document.getElementById('arriver');
+    let deparTime = "06:30";  // Exemple d'heure de départ
+    let arrivTime = "08:45";  // Exemple d'heure d'arrivée
+    let prixTotal = (adultCounteur * adultPrice) + (EnfantCounteur * EnfantPrice); // Calcul du prix total
+    
+    let ij = 0; // Compteur des tickets générés
 
+    // Ajouter un ticket pour chaque adulte
+    for (let m = 0; m < adultCounteur; m++) {
+        ij++;
+        ticket.innerHTML += `
+            <div class="card content">
+                <div class="user-info">
+                    <p>Ticket #${ij}</p>
+                    <p><span>Départ :</span><span> ${depart.value} à ${deparTime} </span></p>
+                    <i class="fa-solid fa-arrow-down-long"></i>
+                    <p><span>Arrivée :</span><span> ${arriver.value} à ${arrivTime}</span></p>
+                    <p>Date de réservation : <span>${date.value}</span></p>
+                    <p>Prix : <span>${adultPrice} DH</span></p>
+                </div>
+                <div class="qr-code">
+                    <p>Code QR :</p>
+                    <img style=" width: 70px; " src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Ticket-${ij}" alt="Code QR"/>
+                </div>
+            </div>
+        `;
+    }
+    
+    // Ajouter un ticket pour chaque enfant
+    for (let m = 0; m < EnfantCounteur; m++) {
+        ij++;
+        ticket.innerHTML += `
+            <div class="card content">
+                <div class="user-info">
+                    <p>Ticket #${ij}</p>
+                    <p><span>Départ :</span><span> ${depart.value} à 06:30 </span></p>
+                    <i class="fa-solid fa-arrow-down-long"></i>
+                    <p><span>Arrivée :</span><span> ${arriver.value} à 08:45</span></p>
+                    <p>Date de réservation : <span>${date.value}</span></p>
+                    <p>Prix : <span>${EnfantPrice} DH</span></p>
+                </div>
+                <div class="qr-code">
+                    <p>Code QR :</p>
+                    <img style=" width: 70px;" margin:50px ;  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Ticket-${ij}" alt="Code QR"/>
+                </div>
+            </div>
+        `;
+    }
+    
+    // Afficher le prix total
+    ticket.innerHTML += `
+        <div class="total">
+            <p><strong>Prix total : ${prixTotal} DH</strong></p>
+        </div>
+    `;
+}
 
 

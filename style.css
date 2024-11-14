@@ -394,4 +394,13 @@ body .progress_inner input[type=radio] {
   display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 15px;
 }
 
+.temps{
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
 
+.temps:focus{
+border: 2px solid #70afd0;
+
+}
